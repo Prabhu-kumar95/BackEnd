@@ -11,7 +11,7 @@ async function createFile(data = null) {
   }
 }
 
-FilesRouter.post("/createDefaultFile", (request, response, next) => {
+FilesRouter.get("/createDefaultFile", (request, response, next) => {
   console.log("REQUEST HIT");
   createFile();
   return response.status(200).json({
